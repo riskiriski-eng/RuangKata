@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuangKata — Tempat Pulang bagi Kata</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#" class="logo">Ruang<span>Kata</span></a>
+
+        <div class="nav-links">
+            <a href="#beranda">Beranda</a>
+            <a href="#dinding">Dinding Kata</a>
+            <a href="#tulis">Tulis Surat</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+            <p class="eyebrow">SEBUAH RUANG UNTUK BERCERITA</p>
+
+            <h1>Ruang<span>Kata</span></h1>
+
+            <h2>
+                Tempat pulang bagi kata-kata
+                yang tak sempat terucap.
+            </h2>
+
+            <p class="hero-description">
+                Tuliskan perasaanmu, simpan kenanganmu,
+                atau bagikan cerita yang selama ini
+                hanya berani kamu simpan sendiri.
+            </p>
+
+            <a href="#tulis" class="btn-primary">
+                Mulai Menulis →
+            </a>
+        </div>
+    </section>
+
+    <!-- FORM TULIS SURAT -->
+    <section class="write-section" id="tulis">
+
+        <div class="section-heading">
+            <p class="eyebrow">UNGKAPKAN ISI HATIMU</p>
+            <h2>Tulis Sebuah Surat</h2>
+            <p>
+                Tidak semua perasaan harus disampaikan
+                secara langsung.
+            </p>
+        </div>
+
+        <form id="letterForm" class="letter-form">
+
+            <label for="title">Judul Surat</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="Contoh: Untuk seseorang yang kurindukan"
+                required
+            >
+
+            <label for="category">Kategori</label>
+            <select id="category" required>
+                <option value="Rindu">Rindu</option>
+                <option value="Maaf">Maaf</option>
+                <option value="Terima Kasih">Terima Kasih</option>
+                <option value="Cinta">Cinta</option>
+                <option value="Perpisahan">Perpisahan</option>
+            </select>
+
+            <label for="message">Isi Surat</label>
+            <textarea
+                id="message"
+                rows="8"
+                placeholder="Tuliskan semua yang ingin kamu sampaikan..."
+                required
+            ></textarea>
+
+            <!-- PILIH PRIVASI -->
+            <label>Privasi Surat</label>
+
+            <div class="privacy-options">
+                <label class="radio-option">
+                    <input
+                        type="radio"
+                        name="privacy"
+                        value="private"
+                        checked
+                    >
+                    Surat Pribadi
+                </label>
+
+                <label class="radio-option">
+                    <input
+                        type="radio"
+                        name="privacy"
+                        value="public"
+                    >
+                    Publik (Anonim)
+                </label>
+            </div>
+
+            <!-- MUSIK SPOTIFY -->
+            <div class="music-section">
+
+                <p class="eyebrow">SOUNDTRACK UNTUK SURAT INI</p>
+
+                <h3>Tambahkan Sebuah Lagu ♫</h3>
+
+                <p class="music-description">
+                    Ada lagu yang mampu menyampaikan
+                    sesuatu yang tidak bisa dijelaskan kata-kata.
+                </p>
+
+                <label for="spotifyLink">
+                    Link Lagu Spotify (Opsional)
+                </label>
+
+                <input
+                    type="url"
+                    id="spotifyLink"
+                    placeholder="https://open.spotify.com/track/..."
+                >
+
+                <div id="spotifyPreview" class="spotify-preview">
+                    <p>Pratinjau lagu akan muncul di sini.</p>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn-primary submit-btn">
+                Simpan Surat →
+            </button>
+
+            <p id="statusMessage" class="status-message"></p>
+
+        </form>
+    </section>
+
+    <!-- DINDING KATA -->
+    <section class="wall-section" id="dinding">
+
+        <div class="section-heading">
+            <p class="eyebrow">CERITA DARI MEREKA</p>
+            <h2>Dinding Kata</h2>
+            <p>
+                Baca cerita, temukan rasa,
+                dan ketahui bahwa kamu tidak sendiri.
+            </p>
+        </div>
+
+        <div id="letterList" class="letter-list">
+            <p class="empty-message">
+                Belum ada surat yang dibagikan.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>Ruang<span>Kata</span></h2>
+
+        <p>
+            Tak semua rasa harus sampai.
+        </p>
+
+        <p class="copyright">
+            © 2026 RuangKata. Sebuah ruang untuk bercerita.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
